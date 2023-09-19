@@ -13,6 +13,7 @@
  //5- BigInt  => for large numbers
  //6- boolean => true/false
  //7- undefined 
+ 
 
 
  // Objects or Non-primitive dataTypes
