@@ -42,7 +42,7 @@ console.log(typeof anotherId);
 // ****************************************************
 
 // *****stack (memory use for primitive dataTypes) *****//
-
+        //  (when we enter anything/values in stack memory we will get "exaxt copy" of that given value in return )
 
 //example of heap memory
 let mysiteName = "haiderallydotcom"
@@ -55,7 +55,7 @@ yoursiteName = "aally.com"
 
 
 // **** heap (memory use for non-primitive dataTypes)******//
-
+       //  (when we enter anything/values in stack memory we will get "reference" of that given value in return )
 
 //example of heap memory
 let userOne = {
@@ -67,5 +67,5 @@ let userTwo = userOne
 
 userTwo.email = "haiderapparels@gmail.com"
 
-console.log(userOne.email)
-console.log(userTwo.email)
+// console.log(userOne.email)
+// console.log(userTwo.email)
