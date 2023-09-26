@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Background Color Switcher</title>
+  </head>
+  <body>
+    <!-- -----html ---------- -->
+
+    <!-- <nav>
+    <a href="/" aria-current="page">Home</a>
+    <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+      >Youtube channel</a
+    >
+  </nav> -->
+
+    <div class="canvas">
+      <!-- <a
+      style="
+        background-color: #fff;
+        padding: 10px 30px;
+        border-radius: 8px;
+        color: #212121;
+        text-decoration: none;
+        border: 2px solid #212121;
+      "
+      href="../index.html"
+      >Back to Home Page</a
+    > -->
+      <h1>Color Scheme Switcher</h1>
+      <span class="button" id="antiquewhite"></span>
+      <span class="button" id="aqua"></span>
+      <span class="button" id="aquamarine"></span>
+      <span class="button" id="blueviolet"></span>
+
+      <span class="button" id="grey"></span>
+      <span class="button" id="white"></span>
+      <span class="button" id="cornflowerblue"></span>
+      <span class="button" id="yellow"></span>
+
+      <span class="button" id="brown"></span>
+      <span class="button" id="coral"></span>
+      <span class="button" id="chartreuse"></span>
+      <span class="button" id="yellow"></span>
+
+      <span class="button" id="darkcyan"></span>
+      <span class="button" id="darkgreen"></span>
+      <span class="button" id="darkorange"></span>
+      <span class="button" id="greenyellow"></span>
+      <h2>
+        Try clicking on one of the colors above
+        <span>to change the background color of this page!</span>
+      </h2>
+    </div>
+
+    <!-- -----html ---------- -->
+  </body>
+
+  <style>
+    html {
+      margin: 0;
+    }
+
+    span {
+      display: block;
+    }
+    .canvas {
+      margin: 100px auto 100px;
+      width: 80%;
+      text-align: center;
+    }
+
+    .button {
+      width: 100px;
+      height: 100px;
+      border: solid black 2px;
+      display: inline-block;
+    }
+
+    main {
+      color: antiquewhite;
+      color: aqua;
+      color: aquamarine;
+      color: blueviolet;
+    }
+
+    #antiquewhite {
+      background: antiquewhite;
+    }
+    #aqua {
+      background: aqua;
+    }
+    #aquamarine {
+      background: aquamarine;
+    }
+    #blueviolet {
+      background: blueviolet;
+    }
+    /* -2-------- */
+
+    #grey {
+      background: grey;
+    }
+
+    #white {
+      background: white;
+    }
+    #cornflowerblue {
+      background: cornflowerblue;
+    }
+    #yellow {
+      background: yellow;
+    }
+
+    /* -----3--------- */
+    #brown {
+      background: brown;
+    }
+
+    #coral {
+      background: coral;
+    }
+    #chartreuse {
+      background: chartreuse;
+    }
+    #crimson {
+      background: crimson;
+    }
+
+    /* -----4--------- */
+    #darkcyan {
+      background: darkcyan;
+    }
+
+    #darkgreen {
+      background: darkgreen;
+    }
+    #darkorange {
+      background: darkorange;
+    }
+    #greenyellow {
+      background: greenyellow;
+    }
+  </style>
+
+  <script>
+    const buttons = document.querySelectorAll(".button");
+    const body = document.querySelector("body");
+
+    buttons.forEach(function (button) {
+      console.log(button);
+      button.addEventListener("click", function (event) {
+        console.log(event);
+        console.log(event.target);
+
+        if (event.target.id === "antiquewhite") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "aqua") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "aquamarine") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "blueviolet") {
+          body.style.backgroundColor = event.target.id;
+        }
+        //   -----2-----
+        if (event.target.id === "grey") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "white") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "cornflowerblue") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "yellow") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        //   -----3-----
+        if (event.target.id === "brown") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "coral") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "chartreuse") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "crimson") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        //   -----4-----
+        if (event.target.id === "darkcyan") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "darkgreen") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "darkorange") {
+          body.style.backgroundColor = event.target.id;
+        }
+
+        if (event.target.id === "greenyellow") {
+          body.style.backgroundColor = event.target.id;
+        }
+      });
+    });
+  </script>
+</html>
