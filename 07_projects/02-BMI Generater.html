@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Generater || JavaScript</title>
+  </head>
+  <body>
+    <!-- ========= Html ========= -->
+
+    <!-- <nav>
+    <a href="/" aria-current="page">Home</a>
+    <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+      >Youtube channel</a
+    >
+  </nav> -->
+
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form>
+        <p><label>Height in CM: </label><input type="text" id="height" /></p>
+        <p><label>Weight in KG: </label><input type="text" id="weight" /></p>
+        <button>Calculate</button>
+        <div id="results"></div>
+        <div id="guide"></div>
+        <div id="weight-guide">
+          <h3>BMI Weight Guide</h3>
+          <p>Under Weight = Less than 18.6</p>
+          <p>Normal Range = 18.6 and 24.9</p>
+          <p>Overweight = Greater than 24.9</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- ========= Html ========= -->
+
+    <!-- ========= Css ========= -->
+
+    <style>
+      .container {
+        width: 60vw;
+        height: 90vh;
+        margin: 50px auto;
+        background-color: #797978;
+        padding-left: 30px;
+      }
+      #height,
+      #weight {
+        width: 200px;
+        height: 25px;
+        margin-top: 30px;
+      }
+
+      #weight-guide {
+        margin-left: 75px;
+        margin-top: 25px;
+      }
+
+      #results {
+        padding: 10px;
+        font-size: 20px;
+        margin-left: 90px;
+        margin-top: 15px;
+        color: rgb(241, 241, 241);
+        width: 34vw;
+        height: 3vh;
+        /* background-color: red; */
+      }
+
+      #guide {
+        padding: 10px;
+        font-size: 20px;
+        margin-left: 90px;
+        margin-bottom: 30px;
+        color: rgb(241, 241, 241);
+        width: 34vw;
+        height: 3vh;
+        /* background: red; */
+      }
+
+      button {
+        width: 120px;
+        height: 35px;
+        margin-left: 100px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        background-color: #fff;
+        padding: 1px 20px;
+        border-radius: 8px;
+        color: #212121;
+        text-decoration: none;
+        border: 2px solid #212121;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      h1 {
+        padding-left: 15px;
+        padding-top: 25px;
+      }
+    </style>
+
+    <!-- ========= Css ========= -->
+
+    <!-- ========= JavaScript ========= -->
+
+    <script>
+      const form = document.querySelector("form");
+      // console.log(form);
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const height = parseInt(document.querySelector("#height").value);
+        const weight = parseInt(document.querySelector("#weight").value);
+        const results = document.querySelector("#results");
+        const guide = document.querySelector("#guide");
+
+        if (height < 0 || height === "" || isNaN(height)) {
+          results.innerHTML = `Please give a valid height : ${height}`;
+        } else if (weight < 0 || weight === "" || isNaN(weight)) {
+          results.innerHTML = `Please give a valid weight : ${weight}`;
+        } else {
+          const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+          //show the result
+          results.innerHTML = `<span>${bmi}</span>`;
+
+          // Categorize BMI
+          if (bmi < 18.6) {
+            guide.innerHTML = "You are underweight.";
+          } else if (bmi <= 24.9) {
+            guide.innerHTML = "Your weight is normal.";
+          } else {
+            guide.innerHTML = "You are overweight.";
+          }
+        }
+      });
+    </script>
+
+    <!-- ========= JavaScript ========= -->
+  </body>
+</html>
